@@ -69,6 +69,9 @@ test("Swap 2 items with further indented children (all children must be consider
     ls.indent(4);
     ls.indent(4);
     expect(ls.list[4].level).toBe(4);
-    ls.moveItem(1, 0);
+    ls.swapItems(1, 0);
     ls.printList();
+    expect(ls.list.length).toBe(5);
+    expect(ls.list[0].id).toBe("2");
+    expect(ls.list[4].id).toBe("1");
   });

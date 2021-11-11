@@ -26,7 +26,13 @@ export class ListState {
     return this.list.splice(begin, end - begin + 1);
   }
 
-  moveItem(fromIndex: number, toIndex: number) {
+  /**
+   * Swap two list items that are in same level.
+   *
+   * @param {number} fromIndex Index of item to swap with. 
+   * @param {number} toIndex Index of item to swap to.
+   */
+  swapItems(fromIndex: number, toIndex: number) {
     if (this.list[fromIndex].level !== this.list[toIndex].level) {
       throw new Error("Cannot swap items in different levels");
     }
