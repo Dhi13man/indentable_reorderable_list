@@ -1,0 +1,6 @@
+{
+  "include": [
+    "jest.config.js",
+    ".eslintrc.js"
+  ]
+}
